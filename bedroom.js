@@ -16,7 +16,7 @@ function publishReading() {
       if (res.status == 200) console.log("Success");
     },
     (err) => {
-      console.log("err");
+      console.log(err);
     }
   );
 }
