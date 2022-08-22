@@ -27,6 +27,7 @@ app.post("/", (req, res) => {
       res.status(200).send("Success");
     },
     (err) => {
+      connection.close();
       res.status(400).send("Error: " + err);
     }
   );
