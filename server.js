@@ -18,7 +18,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  res.status(200).send("Received: " + req.body);
   var connection = mongoose.createConnection(MONGO);
   let model = connection.model("Sensor", Sensor.schema);
   new model(req.body).save().then(
